@@ -1,0 +1,47 @@
+<h1>List Product</h1>
+<button (click)="displayFormCreate()">Create new product</button>
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th colspan="2">Action</th>
+  </tr>
+  <tr *ngFor="let p of products">
+    <td>{{p.name}}</td>
+    <td>{{p.price}}</td>
+    <td>{{p.description}}</td>
+    <td>
+      <button (click)="deleteProduct(p.id)">Delete</button>
+    </td>
+    <td>
+      <button (click)="updateProduct(p.id)">Update</button>
+    </td>
+  </tr>
+</table>
+
+<form hidden id="form-product" class="box" [formGroup]="formProduct" (ngSubmit)="createAndUpdateProduct()">
+  <table>
+    <tr>
+      <th colspan="2"><h1 id="title"></h1></th>
+    </tr>
+    <tr>
+      <th><label for="name" class="form-label">Name:</label></th>
+      <td><input class="form-control" id="name" formControlName="name" type="text"></td>
+    </tr>
+    <tr>
+      <th><label for="price" class="form-label">Price:</label></th>
+      <td><input class="form-control" id="price" formControlName="price" type="text"></td>
+    </tr>
+    <tr>
+      <th><label for="description" class="form-label">Description:</label></th>
+      <td><input class="form-control" id="description" formControlName="description" type="text"></td>
+    </tr>
+    <tr>
+      <td colspan="2" id="center">
+        <button type="submit" class="btn btn-primary" id="submit">Create</button>
+        <button type="reset" class="btn btn-primary" id="reset" hidden></button>
+      </td>
+    </tr>
+  </table>
+</form>
