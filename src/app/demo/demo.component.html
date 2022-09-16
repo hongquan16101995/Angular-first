@@ -1,0 +1,9 @@
+<h3>Two-way Binding</h3>
+<input type="text" [(ngModel)]="demo">
+<p>Result: {{demo}}</p>
+
+<button [disabled]="isUnchanged">Test disable</button>
+
+<button (click)="demo2()">ClickMe</button>
+
+<button routerLink="/">Back to home</button>

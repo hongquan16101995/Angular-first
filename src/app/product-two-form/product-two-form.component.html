@@ -45,6 +45,15 @@
   </table>
 </form>
 
+<div *ngIf="test === true">
+  <app-demo></app-demo>
+</div>
+
+<div *ngIf="test === false">
+  <h1>Done</h1>
+</div>
+
+
 <form [formGroup]="formUpdateProduct" (ngSubmit)="updateProduct()">
   <table>
     <tr>
@@ -70,3 +79,5 @@
     </tr>
   </table>
 </form>
+<br>
+<button routerLink="/">Back to home</button>

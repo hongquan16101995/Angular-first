@@ -1,6 +1,6 @@
 <h1>List Product</h1>
 <button (click)="displayFormCreate()">Create new product</button>
-<table border="1">
+<table border="1" style="margin-top: 10px">
   <tr>
     <th>Name</th>
     <th>Price</th>
@@ -12,10 +12,10 @@
     <td>{{p.price}}</td>
     <td>{{p.description}}</td>
     <td>
-      <button (click)="deleteProduct(p.id)">Delete</button>
+      <button (click)="updateProduct(p.id)">Update</button>
     </td>
     <td>
-      <button (click)="updateProduct(p.id)">Update</button>
+      <button (click)="deleteProduct(p.id)">Delete</button>
     </td>
   </tr>
 </table>
@@ -45,3 +45,6 @@
     </tr>
   </table>
 </form>
+<br>
+<button routerLink="/product-two">Display product 2</button>
+<button style="margin-left: 10px" routerLink="/demo">Demo</button>

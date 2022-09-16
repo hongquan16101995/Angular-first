@@ -1,0 +1,36 @@
+<h2>List student</h2>
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Address</th>
+  </tr>
+  <tr *ngFor="let s of students">
+    <td>{{s.name}}</td>
+    <td>{{s.age}}</td>
+    <td>{{s.address}}</td>
+  </tr>
+</table>
+
+<form [formGroup]="studentForm" (ngSubmit)="createStudent()" id="form-create">
+  <table>
+    <tr>
+      <td>Name</td>
+      <td><input type="text" id="name" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>Age</td>
+      <td><input type="text" id="age" formControlName="age"></td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td><input type="text" id="address" formControlName="address"></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button>Create</button>
+        <button type="reset" hidden id="reset">Create</button>
+      </td>
+    </tr>
+  </table>
+</form>

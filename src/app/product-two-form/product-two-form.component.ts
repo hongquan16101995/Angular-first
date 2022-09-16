@@ -13,6 +13,7 @@ export class ProductTwoFormComponent implements OnInit {
   formUpdateProduct!: FormGroup;
   products: Product[] = [];
   i: number = 4;
+  test:boolean = false
 
   constructor(private formGroup: FormBuilder) {
   }

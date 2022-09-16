@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Product} from "../model/product";
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-product',
@@ -30,6 +30,7 @@ export class ProductComponent implements OnInit {
   displayFormCreate() {
     document.getElementById("form-product")!.hidden = false
     document.getElementById("title")!.innerHTML = "Create new product"
+    document.getElementById("submit")!.innerHTML = "Create"
     document.getElementById("reset")!.click()
   }
 
